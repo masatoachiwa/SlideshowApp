@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE439CA622942B0D00AE6F20 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE439CA522942B0D00AE6F20 /* secondViewController.swift */; };
 		EE70DF51229191A70089E329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70DF50229191A70089E329 /* AppDelegate.swift */; };
 		EE70DF53229191A70089E329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70DF52229191A70089E329 /* ViewController.swift */; };
 		EE70DF56229191A70089E329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE70DF54229191A70089E329 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE439CA522942B0D00AE6F20 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		EE70DF4D229191A70089E329 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE70DF50229191A70089E329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE70DF52229191A70089E329 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				EE70DF50229191A70089E329 /* AppDelegate.swift */,
 				EE70DF52229191A70089E329 /* ViewController.swift */,
+				EE439CA522942B0D00AE6F20 /* secondViewController.swift */,
 				EE70DF54229191A70089E329 /* Main.storyboard */,
 				EE70DF57229191A90089E329 /* Assets.xcassets */,
 				EE70DF59229191A90089E329 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE70DF53229191A70089E329 /* ViewController.swift in Sources */,
+				EE439CA622942B0D00AE6F20 /* secondViewController.swift in Sources */,
 				EE70DF51229191A70089E329 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
