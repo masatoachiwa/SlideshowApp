@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tensi" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-D9-eqH">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tensi.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-D9-eqH">
                                 <rect key="frame" x="41.333333333333343" y="287.33333333333337" width="331.33333333333326" height="331.33333333333337"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -131,6 +131,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tensi" width="301" height="595"/>
+        <image name="tensi.png" width="301" height="595"/>
     </resources>
 </document>

@@ -16,12 +16,17 @@ class ViewController: UIViewController {
     
     var updateCount = 0
     
+    
+    
     @IBOutlet var imageZ: UIImageView!
     
     let image0 = UIImage(named:"tensi")
   
     let image1 = UIImage(named:"akuma")
     
+    let image2 = UIImage(named:"background.jpg")
+  
+   
     @IBOutlet var twoButton: UIButton!
     
     @IBOutlet var nextButton: UIButton!
@@ -31,12 +36,14 @@ class ViewController: UIViewController {
     var start1: UIImage = UIImage(named:"start")!
     var stop1: UIImage = UIImage(named:"stop")!
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     
     
-    imageArray = [image0!,image1!]
+    imageArray = [image0!,image1!,image2!]
         }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,12 +76,15 @@ class ViewController: UIViewController {
        
             twoButton.setTitle("停止", for: .normal)
             
-            timer = Timer.scheduledTimer(withTimeInterval:0.5, repeats:
+            timer = Timer.scheduledTimer(withTimeInterval:2, repeats:
             true, block: { (timer) in
-                
-                if(self.updateCount > 1){
+               
+                self.updateCount = self.updateCount + 1
+             
+                if(self.updateCount >   2){
                     
                     self.updateCount = 0
+                    
                     self.imageZ.image = UIImage(named: "tensi")    //画像変更
                     
                 }else{
@@ -82,7 +92,7 @@ class ViewController: UIViewController {
                     self.imageZ.image = self.imageArray[self.updateCount]   //2秒ごとにプラス１されてimage0,1を配列の中から交互に呼び出す
                     
                 }
-                self.updateCount = self.updateCount + 1
+               
         })
     
          }else { //それ以外（nilじゃなかったら）
@@ -101,41 +111,53 @@ class ViewController: UIViewController {
 
 
     @IBAction func nextButton(_ sender: Any) {
+    
+       
         
+        updateCount = updateCount + 1
   
-        if imageZ.image == UIImage(named:"tensi"){
-            imageZ.image = UIImage(named:"akuma")
-        
-        }else{
-            imageZ.image = UIImage(named:"tensi")
+        if updateCount > 2 {
+            
+            updateCount  = 0
         }
+        
+        imageZ.image = imageArray[updateCount]
+   
+     
+        }
+        
     
-    
-    }
     
     @IBAction func backButton(_ sender: Any) {
-     
-        if imageZ.image == UIImage(named:"tensi"){
-            imageZ.image = UIImage(named:"akuma")
+      
+       updateCount = updateCount - 1
+        
+        if updateCount < 0 {
             
-        }else{
-            imageZ.image = UIImage(named:"tensi")
+            updateCount = 2
         }
+        
+        
+        imageZ.image = imageArray[updateCount]
+        
+     
+}
+        
     
-    }
-    
-
 
     @IBAction func tapImage(_ sender: Any) {
-    
-    
+  
+        timer.invalidate()   // タイマーを停止する
+        timer = nil
+         twoButton.setTitle("再生", for: .normal)//ボタンの画像変更
+        
         performSegue(withIdentifier: "result", sender: nil)
     
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
-    }
+
     
     
     
@@ -155,7 +177,7 @@ class ViewController: UIViewController {
 
     
     
-    
+}
     
     
 
