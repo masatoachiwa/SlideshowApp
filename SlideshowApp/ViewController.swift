@@ -146,9 +146,10 @@ class ViewController: UIViewController {
     
 
     @IBAction func tapImage(_ sender: Any) {
-  
+        if timer != nil{
         timer.invalidate()   // タイマーを停止する
-        timer = nil
+    
+        }
          twoButton.setTitle("再生", for: .normal)//ボタンの画像変更
         
         performSegue(withIdentifier: "result", sender: nil)
@@ -158,24 +159,7 @@ class ViewController: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
 
-    
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-
-        
-        
-        
-        
-
-    
     
 }
     
