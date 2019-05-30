@@ -33,11 +33,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var backButton: UIButton!
     
-    var start1: UIImage = UIImage(named:"start")!
-    var stop1: UIImage = UIImage(named:"stop")!
     
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
