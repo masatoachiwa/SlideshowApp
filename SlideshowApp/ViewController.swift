@@ -78,13 +78,13 @@ class ViewController: UIViewController {
                
                 self.updateCount = self.updateCount + 1
              
-                if(self.updateCount >   2){
+                if(self.updateCount >   2){ //２を上回ったら
                     
                     self.updateCount = 0
                     
                     self.imageZ.image = UIImage(named: "tensi")    //画像変更
                     
-                }else{
+                }else{  //２を上回らなかったら
                     
                     self.imageZ.image = self.imageArray[self.updateCount]   //2秒ごとにプラス１されてimage0,1を配列の中から交互に呼び出す
                     
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
             
             self.timer.invalidate()   // タイマーを停止する
             self.timer = nil              //タイマーはnilになります
-            nextButton.isEnabled = true    //ボタン使えなくなります
+            nextButton.isEnabled = true    //ボタン使えるようになります
             backButton.isEnabled = true
             
             twoButton.setTitle("再生", for: .normal)//ボタンの画像変更
@@ -145,9 +145,25 @@ class ViewController: UIViewController {
     @IBAction func tapImage(_ sender: Any) {
         if timer != nil{
         timer.invalidate()   // タイマーを停止する
-    
+        timer = nil
+         
+            if  nextButton.isEnabled == false { //{ボタン使えなかったら
+                
+                nextButton.isEnabled = true
+                }
+            
+            if  backButton.isEnabled == false{
+            
+                backButton.isEnabled = true
+            
+                  }
+            
+            
         }
-         twoButton.setTitle("再生", for: .normal)//ボタンの画像変更
+     
+        
+        
+        twoButton.setTitle("再生", for: .normal)//ボタンの画像変更
         
         performSegue(withIdentifier: "result", sender: nil)
     

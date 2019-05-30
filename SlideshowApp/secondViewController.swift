@@ -15,17 +15,26 @@ class secondViewController: UIViewController {
     
     @IBOutlet var bigImage: UIImageView!
  
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         bigImage.image = imageview
         
-        
-        
+
     }
     
+    
+ 
+    
+    
+    }
+    
+    
+    
+    
 
     
 
-}
+
